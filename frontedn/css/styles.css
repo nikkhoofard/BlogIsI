@@ -24,7 +24,7 @@
 }
 
 *,
-::after
+::after,
 ::before {
     margin: 0;
     padding: 0;
@@ -104,3 +104,41 @@ p{
         line-height: 1;
     }
 }
+
+
+/*
+
+Navbar
+
+*/
+
+.nav-links {
+    display: none;
+}
+
+.nav {
+    background: var(--clr-primary-5);
+    height: 4.5rem;
+    padding: 1rem;
+}
+.nav-center {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+.nav-headear {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:center;
+}
+.nav-headear h3 {
+    font-size: 1.75rem;
+}
+
+.nav-btn {
+    justify-self: end;
+    background-color: var(--clr-primary-2);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
