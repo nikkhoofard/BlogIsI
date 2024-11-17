@@ -1,0 +1,36 @@
+{% extends "base.html"%}
+{% block page_title %}
+    <h2>Home</h2>
+{% endblock page_title %}
+
+{% block page_content %}
+    <div>
+    <form action = "" method = "post">
+    {% csrf_token %}
+
+       <div>
+           <p>نام</p>
+            {{ form.first_name }}
+        </div>
+        <div>
+            {{ form.last_name }}
+        </div>
+                <div>
+            {{ form.field }}
+        </div>
+                <div>
+            {{ form.degree }}
+        </div>
+        <div>
+            {{ form.subject }}
+        </div>
+        <div>
+            {{ form.phone_number }}
+        </div>
+        <div>
+            {{ form.summery }}
+        </div>
+     <button type="submit" class="btn btn-primary">ارسال درخواست</button>
+</form>
+    <div>
+{% endblock page_content %}
