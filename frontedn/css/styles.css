@@ -120,6 +120,7 @@ Navbar
     background: var(--clr-primary-5);
     height: 4.5rem;
     padding: 1rem;
+    transition: var(--transition);
 }
 .nav-center {
     width: 100%;
@@ -174,4 +175,19 @@ Navbar
     }
 
     
+}
+
+.navbar-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
+    right: 0;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+}
+
+.hero {
+    height: 130vh ;
+    background: var(--clr-primary-5);
 }
