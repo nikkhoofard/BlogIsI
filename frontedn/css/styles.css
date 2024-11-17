@@ -213,3 +213,54 @@ Sidebar
 .show-sidebar {
     transform: translateX(0);
 } 
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 3rem;
+    background: transparent;
+    border: transparent;
+    color: red;
+    cursor: pointer;
+    transition: var(--transition);
+
+}
+
+.close-btn:hover {
+    color: #e66b6b;
+}
+
+.sidebar-links {
+    text-align: center;
+
+}
+
+.sidebar-links a {
+    font-size: 1.5rem;
+    color: var(--clr-grey-2);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-links a:hover {
+    color: var(--clr-primary-4);
+} 
+
+.sidebar-icons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    column-gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sidebar-icon {
+    font-size: 1.5rem;
+    color: var(--clr-grey-1);
+    transition: var(--transition);
+}
+
+.sidebar-icon:hover {
+    color: var(--clr-primary-4);
+}
