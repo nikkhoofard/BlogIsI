@@ -190,10 +190,26 @@ Navbar
 
 /*
 =============== 
-Hero
+Sidebar
 ===============
 */
-.hero {
-    height: 130vh;
-    background: red;
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-grey-3);
+    z-index: 4;
+    display: grid;
+    /* justify-content: center;
+    align-items: center; */
+    place-content: center;
+    transform: translateX(100%);
+    transition: var(--transition);
 }
+
+.show-sidebar {
+    transform: translateX(0);
+} 
