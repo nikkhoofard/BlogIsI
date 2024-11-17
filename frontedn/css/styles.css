@@ -1,8 +1,13 @@
+/*
+=============== 
+Fonts
+===============
+*/
 @font-face {
     font-family: "vazir";
-    src: url("../fonts/vazir/Vazir-Medium-FD-WOL.ttf") format("truetype");
-    src: url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff");
-    src: url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff2");
+    src: url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff2"),
+        url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff"),
+        url("../fonts/vazir/Vazir-Medium-FD-WOL.ttf") format("truetype");
 }
 
 :root {
@@ -23,14 +28,19 @@
     --max-width: 1170px;
 }
 
+/*
+=============== 
+Global Styles
+===============
+*/
+
 *,
 ::after,
 ::before {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
-
 body {
     font-family: var(--ff-primary);
     background: var(--clr-white);
@@ -38,11 +48,9 @@ body {
     line-height: 1.5;
     font-size: 0.875rem;
 }
-
 ul {
     list-style-type: none;
 }
-
 a {
     text-decoration: none;
 }
@@ -50,66 +58,60 @@ a {
 img {
     width: 100%;
     display: block;
-
 }
 
-h1,h2,h3,
+h1,
+h2,
+h3,
 h4 {
     line-height: 1.25;
     margin-bottom: 0.75rem;
     font-family: var(--ff-primary);
 }
-
-h1{
+h1 {
     font-size: 3rem;
 }
-
-h2{
+h2 {
     font-size: 2rem;
 }
-h3{
+h3 {
     font-size: 1.25rem;
 }
-h4{
+h4 {
     font-size: 0.875rem;
 }
-
-p{
+p {
     margin-bottom: 1.25rem;
     color: var(--clr-grey-2);
 }
-
-@media screen and (main-width: 800px){
+@media screen and (min-width: 800px) {
     h1 {
         font-size: 4rem;
     }
-
     h2 {
         font-size: 2.5rem;
     }
     h3 {
         font-size: 1.75rem;
     }
-
     h4 {
         font-size: 1rem;
-
     }
-
     body {
         font-size: 1rem;
     }
-
-    h1,h2,h3,h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
         line-height: 1;
     }
 }
 
-
 /*
-
+=============== 
 Navbar
-
+===============
 */
 
 .nav-links {
@@ -122,44 +124,46 @@ Navbar
     padding: 1rem;
     transition: var(--transition);
 }
+
 .nav-center {
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
 }
-.nav-headear {
+
+.nav-header {
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items:center;
+    align-items: center;
 }
-.nav-headear h3 {
+
+.nav-header h3 {
     font-size: 1.75rem;
-    align-items:center;
 }
 
 .nav-btn {
     justify-self: end;
-    background-color: var(--clr-primary-2);
+    background: transparent;
+    border-color: transparent;
+    color: var(--clr-primary-2);
     font-size: 2rem;
     cursor: pointer;
 }
 
-
-@media screen and (min-width: 787px) {
+@media screen and (min-width: 768px) {
     .nav-btn {
         display: none;
     }
 
-
     .nav-links {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        column-gap:2rem ;
+        column-gap: 2rem;
         justify-items: center;
         justify-self: end;
     }
 
-    .nav-links a{
+    .nav-links a {
         color: var(--clr-grey-1);
         transition: var(--transition);
     }
@@ -173,21 +177,23 @@ Navbar
         grid-template-columns: auto 1fr;
         align-items: center;
     }
-
-    
 }
 
 .navbar-fixed {
     position: fixed;
     width: 100%;
     top: 0;
-    
-    right: 0;
+    left: 0;
     background: var(--clr-white);
     box-shadow: var(--light-shadow);
 }
 
+/*
+=============== 
+Hero
+===============
+*/
 .hero {
-    height: 130vh ;
-    background: var(--clr-primary-5);
+    height: 130vh;
+    background: red;
 }
