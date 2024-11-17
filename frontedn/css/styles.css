@@ -128,11 +128,12 @@ Navbar
 }
 .nav-headear {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     align-items:center;
 }
 .nav-headear h3 {
     font-size: 1.75rem;
+    align-items:center;
 }
 
 .nav-btn {
@@ -142,3 +143,35 @@ Navbar
     cursor: pointer;
 }
 
+
+@media screen and (min-width: 787px) {
+    .nav-btn {
+        display: none;
+    }
+
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap:2rem ;
+        justify-items: center;
+        justify-self: end;
+    }
+
+    .nav-links a{
+        color: var(--clr-grey-1);
+        transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+        color: var(--clr-primary-4);
+    }
+
+    .nav-center {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+
+    
+}
