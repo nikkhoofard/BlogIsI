@@ -1,36 +1,25 @@
 {% extends "base.html"%}
+{% block headear %}
+<div class="topnav">
+  <a class="active" href="#home">انجام پروپوزال</a>
+  <a href="#news">انجام مقاله</a>
+  <a href="#contact">ارتباط با ما</a>
+  <a href="#about">درباره ما</a>
+</div>
+
+{% endblock headear %}
 {% block page_title %}
-    <h2>Home</h2>
+
 {% endblock page_title %}
 
 {% block page_content %}
-    <div>
-    <form action = "" method = "post">
-    {% csrf_token %}
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Render the form fields -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
-       <div>
-           <p>نام</p>
-            {{ form.first_name }}
-        </div>
-        <div>
-            {{ form.last_name }}
-        </div>
-                <div>
-            {{ form.field }}
-        </div>
-                <div>
-            {{ form.degree }}
-        </div>
-        <div>
-            {{ form.subject }}
-        </div>
-        <div>
-            {{ form.phone_number }}
-        </div>
-        <div>
-            {{ form.summery }}
-        </div>
-     <button type="submit" class="btn btn-primary">ارسال درخواست</button>
-</form>
     <div>
 {% endblock page_content %}
