@@ -476,3 +476,27 @@ Sidebar
         
     }
 }
+
+
+.footer {
+    padding-bottom: 2rem;
+    background: #222;
+    display: grid;
+    place-items: center;
+}
+
+.footer .secion-icons {
+    margin-bottom: 2rem;
+}
+
+.footer .secion-icons {
+    color : var(--clr-primary-2)
+}
+
+.footer .secion-icons:hover {
+    color: var(--clr-primary-5) ;
+}
+
+.footer p {
+    font-size: 1.5rem;
+}
