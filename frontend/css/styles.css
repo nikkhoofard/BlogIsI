@@ -331,7 +331,18 @@ Sidebar
 .hero-img {
     display: none;
 }
+.hero-form {
+    display: grid;
+    margin: 3rem;
+    padding: 3rem;
+    background: var(--clr-primary-4);
+    border-radius: var(--radius);
+    
 
+}
+
+.hero-form-one {
+}
 
 .hero-center {
     min-height: calc(100vh - 4.5rem) ;
@@ -372,6 +383,8 @@ Sidebar
         object-fit: cover;
         border-radius: var(--radius)
     }
+
+    
 
     .hero-img::before {
         content: "" ;
