@@ -9,7 +9,7 @@ class FormAdmin(admin.ModelAdmin):
     list_display = ('last_name',
                     'field',
                     'degree', "subject",
-                    'phone_number', 'is_done', 'created_on')
+                    'phone_number', 'is_done', 'created_on', 'summery')
     search_fields = ('last_name', 'field', 'degree', "subject", 'phone_number',)
     list_filter = ("is_done", "created_on",)
 

@@ -8,7 +8,7 @@ class Form(models.Model):
     field = models.CharField(max_length=255)
     degree = models.CharField(max_length=255)
     subject = models.CharField(max_length=255)
-    summery = models.TextField
+    summery = models.TextField(default="none")
     phone_number = models.CharField(
         max_length=20,
         validators=[RegexValidator(
